@@ -16,12 +16,12 @@
     &quot;assignee&quot;: &quot;faizulmdnor&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/fmdnor/KTMB_Ridership&quot;,
-    &quot;accountId&quot;: &quot;355f005c-0ef1-4111-b7e8-064e0029b0a4&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/faizulmdnor/KTMB_Ridership.git",
+    "accountId": "355f005c-0ef1-4111-b7e8-064e0029b0a4"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
