@@ -5,7 +5,7 @@ import altair as alt
 from statsmodels.tsa.statespace.sarimax import SARIMAX
 
 now = datetime.now()
-current_year = now.strftime('%Y')
+current_year = int(now.strftime('%Y'))
 
 
 # ----------------------------
