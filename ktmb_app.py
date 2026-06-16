@@ -177,7 +177,7 @@ df_combined.reset_index(drop=True, inplace=True)
 
 sarima_chart = (
     alt.Chart(df_combined)
-    .mark_line(interpolate="linear")
+    .mark_line(interpolate="basis-closed")
     .encode(
         x=alt.X("date:T", title="Date"),
         y=alt.Y("ridership:Q", title="Ridership"),
