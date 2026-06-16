@@ -108,25 +108,31 @@ df_result["ridership"] = pd.to_numeric(df_result["ridership"], errors="coerce")
 df_result["predict_ridership"] = pd.to_numeric(df_result["predict_ridership"], errors="coerce")
 df_result['Year'] = pd.to_datetime(df_result['date']).dt.year
 
+
 # Date range filter
 min_date = df_result["date"].min()
 max_date = df_result["date"].max()
 
+default_range = [min_date, max_date]
+
 date_range = st.date_input(
     "Select Date Range",
-    [min_date, max_date],
+    default_range,
     min_value=min_date,
     max_value=max_date,
 )
 
-if len(date_range) == 2:
+# If user changes the date range → filter by selection
+if date_range != default_range:
     start_date, end_date = date_range
     df_filtered = df_result[
-        (df_result["date"] >= pd.to_datetime(start_date))
-        & (df_result["date"] <= pd.to_datetime(end_date))
+        (df_result["date"] >= pd.to_datetime(start_date)) &
+        (df_result["date"] <= pd.to_datetime(end_date))
     ]
+
 else:
     df_filtered = df_result[df_result["Year"] == current_year]
+
 
 # ----------------------------
 # Moving average chart
